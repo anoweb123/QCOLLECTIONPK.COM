@@ -1,2 +1,1 @@
 # QCOLLECTIONPK.COM
-Ecommerce store

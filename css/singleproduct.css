@@ -1,0 +1,258 @@
+body {
+    font-family: Roboto, sans-serif;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    vertical-align: middle;
+}
+
+
+/* Position the image container (needed to position the left and right arrows) */
+
+.container {
+    position: relative;
+}
+
+
+/* Hide the images by default */
+
+.mySlides {
+    display: none;
+}
+
+
+/* Add a pointer when hovering over the thumbnail images */
+
+.cursor {
+    cursor: pointer;
+}
+
+
+/* Next & previous buttons */
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+
+/* Position the "next button" to the right */
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+
+/* On hover, add a black background color with a little bit see-through */
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+/* Number text (1/3 etc) */
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+
+/* Container for image text */
+
+.caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/* Six columns side by side */
+
+.column {
+    float: left;
+    width: 16.66%;
+}
+
+
+/* Add a transparency effect for thumnbail images */
+
+.demo {
+    opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+    opacity: 1;
+}
+
+
+/* custom styling */
+
+.h-100 {
+    height: 100px !important;
+}
+
+hr {
+    border-top: 1px solid rgba(0, 0, 0) !important;
+}
+
+.name {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+
+/* for quantity change */
+
+input,
+textarea {
+    border: 1px solid #eeeeee;
+    box-sizing: border-box;
+    margin: 0;
+    outline: none;
+    padding: 10px;
+}
+
+input[type="button"] {
+    -webkit-appearance: button;
+    cursor: pointer;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.input-group {
+    clear: both;
+    margin: 15px 0;
+    position: relative;
+}
+
+.input-group input[type='button'] {
+    background-color: #eeeeee;
+    min-width: 38px;
+    width: auto;
+    transition: all 300ms ease;
+}
+
+.input-group .button-minus,
+.input-group .button-plus {
+    font-weight: bold;
+    height: 50px;
+    padding: 0;
+    width: 50px !important;
+    position: relative;
+    background-color: #FF9900 !important;
+    color: white;
+    border-radius: 5px;
+}
+
+.bg-colors {
+    background-color: #FF9900 !important;
+    color: white;
+    font-size: 18px !important;
+}
+
+.input-group .quantity-field {
+    position: relative;
+    height: 50px;
+    left: -6px;
+    text-align: center;
+    width: 62px;
+    display: inline-block;
+    font-size: 13px;
+    margin: 0 0 5px;
+    resize: vertical;
+}
+
+.button-plus {
+    left: -13px;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+    -webkit-appearance: none;
+}
+
+
+/* for size */
+
+.select-size input {
+    display: none;
+}
+
+label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border: 1px solid #ddd;
+    line-height: 50px;
+    cursor: pointer
+}
+
+#small:checked~label[for="small"],
+#medium:checked~label[for="medium"],
+#large:checked~label[for="large"],
+#x-large:checked~label[for="x-large"],
+#xx-large:checked~label[for="xx-large"] {
+    background: #FF9900;
+    color: #fff;
+}
+
+
+/* for color */
+
+.select-size input {
+    display: none;
+}
+
+.label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border: 1px solid #ddd;
+    line-height: 50px;
+    cursor: pointer;
+    border-radius: 25px;
+}
+
+#color1:checked~label[for="color1"],
+#color2:checked~label[for="color2"],
+#color3:checked~label[for="color3"],
+#color4:checked~label[for="color4"] {
+    /* background: #FF9900 !important; */
+    box-shadow: 1px 1px 10px #FF9900;
+    color: #fff;
+}
