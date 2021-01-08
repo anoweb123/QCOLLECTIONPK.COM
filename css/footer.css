@@ -1,0 +1,48 @@
+.font_size {
+    font-size: 16px;
+}
+
+.font_size1 {
+    font-size: 22px;
+}
+
+.font_size2 {
+    font-size: 12px;
+}
+
+.color_white {
+    color: white;
+}
+
+.bg-color-only {
+    background-color: #28286f;
+}
+
+ol li {
+    list-style: none!important;
+}
+
+ol li a {
+    color: gray;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+ol li a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.social_icons li {
+    display: inline;
+}
+
+.btn-color {
+    background-color: rgb(37, 211, 102);
+    color: white;
+}
+
+.btn-color:hover {
+    background-color: rgb(9, 121, 50);
+    color: white;
+}
