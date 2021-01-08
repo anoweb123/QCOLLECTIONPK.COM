@@ -48,13 +48,13 @@
 
               <!-- For small sliders -->
               <div class="">
-                <img class="demo cursor h-100" src="https://images.unsplash.com/photo-1609607989405-3c188a739fd4?ixid=MXwxMjA3fDB8MHx0b3BpYy1mZWVkfDQwfFM0TUtMQXNCQjc0fHxlbnwwfHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+                <img class="demo cursor h-100" src="https://cdn.shopify.com/s/files/1/0671/0621/products/Black_9dbb4b16-11fc-42f4-86d7-58975956eaf5_2000x.jpg?v=1609860541" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
               </div><br>
               <div class="">
-                <img class="demo cursor h-100" src="https://images.unsplash.com/photo-1590588503756-08a4b2be5eb9?ixid=MXwxMjA3fDB8MHx0b3BpYy1mZWVkfDE0fFM0TUtMQXNCQjc0fHxlbnwwfHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" style="width:100%;" onclick="currentSlide(2)" alt="Cinque Terre">
+                <img class="demo cursor h-100" src="https://cdn.shopify.com/s/files/1/0671/0621/products/Maroon_9339f5c9-723b-4926-bbfe-09f82d86204b_2000x.jpg?v=1609860560" style="width:100%;" onclick="currentSlide(2)" alt="Cinque Terre">
               </div><br>
               <div class="">
-                <img class="demo cursor h-100" src="https://images.unsplash.com/photo-1609607989405-3c188a739fd4?ixid=MXwxMjA3fDB8MHx0b3BpYy1mZWVkfDQwfFM0TUtMQXNCQjc0fHxlbnwwfHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+                <img class="demo cursor h-100" src="https://cdn.shopify.com/s/files/1/0671/0621/products/1_ef46eda1-1ae8-481c-86d2-e6bd80c66c40_2000x.jpg?v=1609860487" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
               </div><br>
               
               <!-- For small sliders -->
@@ -64,15 +64,15 @@
             <div class="col-9">
             
               <div class="mySlides">
-                <img src="https://images.unsplash.com/photo-1609607989405-3c188a739fd4?ixid=MXwxMjA3fDB8MHx0b3BpYy1mZWVkfDQwfFM0TUtMQXNCQjc0fHxlbnwwfHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" style="width:100%; height:400px">
+                <img src="https://cdn.shopify.com/s/files/1/0671/0621/products/Black_9dbb4b16-11fc-42f4-86d7-58975956eaf5_2000x.jpg?v=1609860541" style="width:100%; height:400px">
               </div>
 
               <div class="mySlides">
-                <img src="https://images.unsplash.com/photo-1590588503756-08a4b2be5eb9?ixid=MXwxMjA3fDB8MHx0b3BpYy1mZWVkfDE0fFM0TUtMQXNCQjc0fHxlbnwwfHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" style="width:100%; height:400px">
+                <img src="https://cdn.shopify.com/s/files/1/0671/0621/products/Maroon_9339f5c9-723b-4926-bbfe-09f82d86204b_2000x.jpg?v=1609860560" style="width:100%; height:400px">
               </div>
 
               <div class="mySlides">
-                <img src="https://images.unsplash.com/photo-1609607989405-3c188a739fd4?ixid=MXwxMjA3fDB8MHx0b3BpYy1mZWVkfDQwfFM0TUtMQXNCQjc0fHxlbnwwfHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" style="width:100%; height:400px">
+                <img src="https://cdn.shopify.com/s/files/1/0671/0621/products/1_ef46eda1-1ae8-481c-86d2-e6bd80c66c40_2000x.jpg?v=1609860487" style="width:100%; height:400px">
               </div>
               
 
