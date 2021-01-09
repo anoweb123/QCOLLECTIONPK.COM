@@ -142,3 +142,21 @@
 img {
     color: #fff
 }
+
+
+/* //on screen load animation */
+
+#load {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 9999;
+    background: url("https://codemyui.com/wp-content/uploads/2017/09/rotate-pulsating-loading-animation.gif") no-repeat center center rgba(40, 40, 111, 0.75)
+}
+
+
+/* hover image */
+
+.image-hover img:hover {
+    transform: scale(1.02);
+}

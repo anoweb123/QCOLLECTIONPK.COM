@@ -41,6 +41,9 @@
 
 <body>
     <div>
+        <!-- on screen loading animation -->
+        <div id="load"></div>
+        <!-- on screen loading animation -->
         <?php include './files/header.php' ?>
         <!-- for top carousel -->
         <div>
@@ -123,7 +126,7 @@
 
         <div class="container-fluid py-3">
 
-            <div class="row">
+            <div class="row image-hover">
                 <div class="col-12 text-center mt-3">
                     <h4 style="font-weight: bolder">
                         Categories
@@ -179,6 +182,7 @@
     <script src="./js/singleproduct.js"></script>
     <script src="./js/header.js"></script>
     <script>
+        // to load and animate sell single item item
     $(window).scroll(function() {
         var hT = $('#newarrival').offset().top,
             hH = $('#newarrival').outerHeight(),
@@ -189,6 +193,16 @@
             $("#styles").addClass("fade-in");
         }
     });
+    // to animate when page load CSS is in header.css
+    document.onreadystatechange = function () {
+    var state = document.readyState
+        if (state == 'complete') {
+            setTimeout(function(){
+                document.getElementById('interactive');
+                document.getElementById('load').style.visibility="hidden";
+            },1000);
+        }
+    }
     </script>
 
 </body>
