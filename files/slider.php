@@ -1,94 +1,101 @@
-
 <?php
 //index.php
-$connect = mysqli_connect("localhost", "root", "", "carrwash");
-function make_query($connect)
+require_once "config.php";
+function make_query($link)
 {
-    $query = "SELECT * FROM banner ORDER BY id ASC";
-    $result = mysqli_query($connect, $query);
-    return $result;
+ $query = "SELECT * FROM baner ORDER BY id ASC";
+ $result = mysqli_query($link, $query);
+ return $result;
 }
 
-function make_slide_indicators($connect)
+function make_slide_indicators($link)
 {
-    $output = '';
-    $count = 0;
-    $result = make_query($connect);
-    while ($row = mysqli_fetch_array($result)) {
-        if ($count == 0) {
-            $output .= '
-   <li data-target="#dynamic_slide_show" data-slide-to="' . $count . '" class="active"></li>
+ $output = ''; 
+ $count = 0;
+ $result = make_query($link);
+ while($row = mysqli_fetch_array($result))
+ {
+  if($count == 0)
+  {
+   $output .= '
+   <li data-target="#demo" data-slide-to="'.$count.'" class="active"></li>
    ';
-        } else {
-            $output .= '
-   <li data-target="#dynamic_slide_show" data-slide-to="' . $count . '"></li>
+  }
+  else
+  {
+   $output .= '
+   <li data-target="#demo" data-slide-to="'.$count.'"></li>
    ';
-        }
-        $count = $count + 1;
-    }
-    return $output;
+  }
+  $count = $count + 1;
+ }
+ return $output;
 }
 
-function make_slides($connect)
+function make_slides($link)
 {
-    $output = '';
-    $count = 0;
-    $result = make_query($connect);
-    while ($row = mysqli_fetch_array($result)) {
-        if ($count == 0) {
-            $output .= '<div class="item active">';
-        } else {
-            $output .= '<div class="item">';
-        }
-        $output .= '
-   <img src="' . $row["image"] . '" alt="' . $row["id"] . '" />
-
+ $output = '';
+ $count = 0;
+ $result = make_query($link);
+ while($row = mysqli_fetch_array($result))
+ {
+  if($count == 0)
+  {
+   $output .= '<div class="carousel-item active">';
+  }
+  else
+  {
+   $output .= '<div class="carousel-item">';
+  }
+  $output .= '
+   <img width="100%" height="500px" src="'.$row["url"].'" alt="test" />
+   
   </div>
   ';
-        $count = $count + 1;
-    }
-    return $output;
+  $count = $count + 1;
+ }
+ return $output;
 }
-
 
 ?>
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-
-
-<div id="dynamic_slide_show" class="carousel slide" data-ride="carousel" >
-    <ol class="carousel-indicators">
-    <?php echo make_slide_indicators($connect); ?>
-    </ol>
+<html>
+ <head>
+  <!-- <title>How to Make Dynamic Bootstrap Carousel with PHP</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
+  <style>
+  /* Make the image fully responsive
+  .carousel-inner img {
+    width: 100%;
+    height: 100%;
+  }
+   */
+  </style>
+ </head>
+ <body style="height: 400px !important">
+  <div class="container-fluid p-0" style="">
+   <div id="demo" class="carousel slide" data-ride="carousel">
+   <ul class="carousel-indicators">
+    <?php echo make_slide_indicators($link); ?>
+    </ul>
 
     <div class="carousel-inner">
-     <?php echo make_slides($connect); ?>
+     <?php echo make_slides($link); ?>
     </div>
     <a class="left carousel-control" href="#dynamic_slide_show" data-slide="prev">
-     <i style="margin-top:200%;" class="fa fa-arrow-left"></i>
+     <span class="glyphicon glyphicon-chevron-left"></span>
      <span class="sr-only">Previous</span>
     </a>
 
     <a class="right carousel-control" href="#dynamic_slide_show" data-slide="next">
-    <i style="margin-top:200%;" class="fa fa-arrow-right"></i>
+     <span class="glyphicon glyphicon-chevron-right"></span>
      <span class="sr-only">Next</span>
     </a>
 
    </div>
-
-
-
-
-
-
-    
-</body>
+  </div>
+ </body>
 </html>
-
-

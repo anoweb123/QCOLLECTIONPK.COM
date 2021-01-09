@@ -20,15 +20,15 @@
     <!-- External CSS -->
 
     <!-- For header -->
-    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="./css/header.css">
     <!-- For footer -->
-    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="./css/footer.css">
     <!-- For Slider -->
-    <link rel="stylesheet" href="../css/singleproduct.css">
+    <link rel="stylesheet" href="./css/singleproduct.css">
     <!-- External CSS -->
 
     <!-- External Js -->
-    <script src="../js/header.js"></script>
+    <script src="./js/header.js"></script>
 
     <!-- External Js -->
 
@@ -37,7 +37,6 @@
 </head>
 
 <body>
-    <?php include '../files/header.php' ?>
 
     <div class="container-fluid my-3">
         <div class="row">
@@ -184,75 +183,13 @@
 
             </div>
         </div>
-        <div class="row">
-            <div class="col-12 text-center mt-3">
-                <h4 style="font-weight: bolder">
-                    You May Also Like
-                </h4>
-                <hr style="width: 100px; font-weight: bold">
-            </div>
-
-            <div class="col-6 col-md-3">
-                <div class="card">
-                    <img class="card-img-top" src="../assets/staticassets/nav_logo.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <a href="" class="card-text hide_flow">Some quick example text to build on the card title and
-                            make up a bulk</a>
-                        <p class="text-center pt-4">RS 999 <del>RS 1100</del></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6 col-md-3">
-                <div class="card">
-                    <img class="card-img-top" src="../assets/staticassets/nav_logo.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <a href="" class="card-text hide_flow">Some quick example text to build on the card title and
-                            make up a bulk</a>
-                        <p class="text-center pt-4">RS 999 <del>RS 1100</del></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6 col-md-3">
-                <div class="card">
-                    <img class="card-img-top" src="../assets/staticassets/nav_logo.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <a href="" class="card-text hide_flow">Some quick example text to build on the card title and
-                            make up a bulk</a>
-                        <p class="text-center pt-4">RS 999 <del>RS 1100</del></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6 col-md-3">
-                <div class="card">
-                    <img class="card-img-top" src="../assets/staticassets/nav_logo.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <a href="" class="card-text hide_flow">Some quick example text to build on the card title and
-                            make up a bulk</a>
-                        <p class="text-center pt-4">RS 999 <del>RS 1100</del></p>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 
-<hr class="my-5">
-<div class="container-fluid mb-5">
-  <div class="row">
-    <div class="col-12 text-center">
-      <a href="">
-        <button onclick="goback()" class="btn btn-success">
-          Continue Shopping
-        </button>
-      </a>
-    </div>
-  </div>
-</div>
 
-    <?php include '../files/footer.php' ?>
 
     <!-- External js -->
-    <script src="../js/singleproduct.js"></script>
-    <script src="../js/header.js"></script>
+    <script src="./js/singleproduct.js"></script>
+    <script src="./js/header.js"></script>
 
 </body>
 

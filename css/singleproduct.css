@@ -257,3 +257,51 @@ label {
     box-shadow: 2px 2px 10px black;
     color: #fff;
 }
+
+.social_iconss li {
+    display: inline;
+}
+
+.social_iconss li a {
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+    text-align: center;
+}
+
+.social_iconss li a i {
+    /* text-decoration: none;
+    transition: color 0.3s ease-in-out; */
+    border: 1px solid black;
+    padding: 8px 5px 8px 13px;
+}
+
+.twitter {
+    color: #1da1f1;
+}
+
+.twitter:hover {
+    color: white;
+    background-color: #1da1f1;
+}
+
+.facebook {
+    color: #4266b2;
+}
+
+.facebook:hover {
+    color: white;
+    background-color: #4266b2;
+}
+
+.email {
+    color: #f14336;
+}
+
+.email:hover {
+    color: white;
+    background-color: #f14336;
+}
+
+del {
+    color: #FF9900;
+}

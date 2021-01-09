@@ -16,7 +16,6 @@
 </head>
 
 <body>
-    <div>
         <!-- top navbar -->
         <nav class="navbar navbar-expand-lg navbar-light bg-color py-0">
 
@@ -245,7 +244,6 @@
                 </div>
             </div>
         </nav>
-    </div>
 
 
 
