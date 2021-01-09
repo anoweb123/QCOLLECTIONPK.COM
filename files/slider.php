@@ -76,9 +76,7 @@ function make_slides($link)
   </style>
  </head>
  <body style="height: 400px !important">
-  <br />
   <div class="container-fluid p-0" style="">
-   <br />
    <div id="demo" class="carousel slide" data-ride="carousel">
    <ul class="carousel-indicators">
     <?php echo make_slide_indicators($link); ?>
