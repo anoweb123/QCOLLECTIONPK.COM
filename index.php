@@ -33,8 +33,12 @@
 </head>
 <body>
     <?php include './files/header.php' ?>
-
-
+    <!-- for top carousel -->
+    <div class="height: 400px !important">
+        <?php include './files/slider.php' ?>
+    </div>
+    <!-- for top carousel -->
+    
 
 
     <?php include './files/footer.php' ?>
