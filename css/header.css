@@ -136,9 +136,21 @@
     display: block;
 }
 
+.men:hover .men-menu {
+    display: block;
+}
+
+.women:hover .women-menu {
+    display: block;
+}
+
 
 /* to make ALT tag white */
 
 img {
     color: #fff
+}
+
+.color_black {
+    color: black !important;
 }

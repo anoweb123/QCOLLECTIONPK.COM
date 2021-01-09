@@ -104,7 +104,7 @@
     </div>
     <div class="text-center p-4">
 
-    © <?php echo date("Y"); ?> Q. All rights reserved. Design & Developed by <a href="http://anoweb.co/">ANOWEB</a>
+    © <?php echo date("Y"); ?> Q. All rights reserved. Design & Developed by <a href="http://anoweb.co/" target="_blank">ANOWEB</a>
 
     </div>
 </body>

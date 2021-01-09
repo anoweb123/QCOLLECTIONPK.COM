@@ -130,8 +130,8 @@
                     <input class="form-control my-0 py-1 lime-border d-sm-none d-xl-block d-lg-block" type="text"
                         placeholder="What are you looking for..." aria-label="Search">
                     <div class="input-group-append ">
-                        <span class="input-group-text  search_icon d-sm-none d-xl-block d-lg-block" id="basic-text1"><i class="fa fa-search"
-                                aria-hidden="true"></i></span>
+                        <span class="input-group-text  search_icon d-sm-none d-xl-block d-lg-block" id="basic-text1"><i
+                                class="fa fa-search" aria-hidden="true"></i></span>
                     </div>
                 </form>
                 <div class="form-inline my-2 my-lg-0 ml-5 sidebar-social d-sm-none d-xl-block d-lg-block ">
@@ -191,15 +191,31 @@
                             <input type="text" value="HOme" class="btn w-60 px-0 ml-1 text-uppercase ml-1  white-btn">
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a href="">
+                   
+                    <li class="nav-item dropdown men">
+                        <a  href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <input type="text" value="men" class="btn w-60 px-0 text-uppercase  white-btn">
+                            <i class="fa fa-angle-down" style="font-size: 11px;" aria-hidden="true"></i>
                         </a>
+                        <div class="dropdown-menu men-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item color_black" href="#">Comming Soon !</a>
+                            <div class="dropdown-divider"></div>
+                           
+                        </div>
                     </li>
-                    <li class="nav-item">
-                        <a href="">
+
+                    <li class="nav-item dropdown women">
+                        
+                        <a  href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <input type="text" value="women" class="btn w-70 text-uppercase  white-btn">
+                            <i class="fa fa-angle-down" style="font-size: 11px;" aria-hidden="true"></i>
                         </a>
+                        <div class="dropdown-menu women-menu " aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item color_black" href="#">Comming Soon !</a>
+                            <div class="dropdown-divider"></div>
+                           
+                        </div>
                     </li>
                     <li class="nav-item">
                         <a href="">
@@ -212,19 +228,20 @@
                         </a>
                     </li>
                 </ul>
+
                 <div class="form-inline my-2 my-lg-0">
                     <!-- <ul class="navbar-nav small">
-        <li class="nav-item">
-            <a href="">
-                <p class="pr-4 pt-2">HELP</p>
-            </a>
-        </li>
-        <li class="nav-item">
-            <a href="">
-                <p class="pt-2">RETURN & EXCHANGE</p>
-            </a>
-        </li>
-      </ul> -->
+                    <li class="nav-item">
+                        <a href="">
+                            <p class="pr-4 pt-2">HELP</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="">
+                            <p class="pt-2">RETURN & EXCHANGE</p>
+                        </a>
+                    </li>
+                </ul> -->
                 </div>
             </div>
         </nav>
