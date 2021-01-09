@@ -80,13 +80,6 @@
           </div>
 
 
-          
-    
-
- 
-
- 
-
           <!-- Slider -->
 
 
@@ -105,8 +98,8 @@
               <input type="radio" name="colors" id="color4" />
 
               <label for="color1" class="label" style="background-color:red;"></label>
-              <label for="color2" class="label" style="background-color:blue;"></label>
-              <label for="color3" class="label" style="background-color:pink;"></label>
+              <label for="color2" class="label" style="background-color:black;"></label>
+              <label for="color3" class="label" style="background-color:white;"></label>
               <label for="color4" class="label" style="background-color:green;"></label>
 
             </div>
@@ -138,6 +131,18 @@
             </div>
             <div class="col-6">
               <button style="height: 50px;" class="w-100 text-uppercase btn bg-colors"><i class="fa fa-cart-plus"></i> Add to cart</button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12" style="line-height: 2;word-spacing: 2px; font-weight: lighter;">
+              <p>Please look at the size guide before completing your order as sizes vary from brand to brand.</p>
+              <ul>
+                <li>Soft brushed fleece fabric</li>
+                <li>Two Side pockets</li>
+                <li>One Back Pocket</li>
+                <li>Elasticated waistband with drawcord</li>
+                <li>Ribbed Bottom</li>
+              </ul>
             </div>
           </div>
 
