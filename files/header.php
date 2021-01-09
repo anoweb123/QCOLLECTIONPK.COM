@@ -16,7 +16,6 @@
 </head>
 
 <body>
-    <div>
         <!-- top navbar -->
         <nav class="navbar navbar-expand-lg navbar-light bg-color py-0">
 
@@ -130,8 +129,8 @@
                     <input class="form-control my-0 py-1 lime-border d-sm-none d-xl-block d-lg-block" type="text"
                         placeholder="What are you looking for..." aria-label="Search">
                     <div class="input-group-append ">
-                        <span class="input-group-text  search_icon d-sm-none d-xl-block d-lg-block" id="basic-text1"><i class="fa fa-search"
-                                aria-hidden="true"></i></span>
+                        <span class="input-group-text  search_icon d-sm-none d-xl-block d-lg-block" id="basic-text1"><i
+                                class="fa fa-search" aria-hidden="true"></i></span>
                     </div>
                 </form>
                 <div class="form-inline my-2 my-lg-0 ml-5 sidebar-social d-sm-none d-xl-block d-lg-block ">
@@ -228,7 +227,6 @@
                 </div>
             </div>
         </nav>
-    </div>
 
 
 
