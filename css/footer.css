@@ -23,13 +23,13 @@ ol li {
 }
 
 ol li a {
-    color: gray;
+    color: white;
     text-decoration: none;
     transition: color 0.3s ease-in-out;
 }
 
 ol li a:hover {
-    color: white;
+    color: #ff9900;
     text-decoration: none;
 }
 
