@@ -162,3 +162,21 @@
     .image-hover img:hover {
         transform: scale(1.02);
     }
+    
+    .h-100 {
+        height: 100px !important;
+        background-repeat: no-repeat !important;
+        width: 100% !important;
+        background-size: cover !important;
+    }
+    
+    .contact-bg {
+        width: 100%;
+        background-attachment: fixed;
+        background: url("./assets/staticassets/contact-us-bg.jpg") !important;
+    }
+    
+    .bg-black {
+        background-color: black;
+        border-radius: 10px;
+    }

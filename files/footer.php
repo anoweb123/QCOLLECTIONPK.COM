@@ -7,9 +7,9 @@
 </head>
 <body>
     <!-- footer -->
-    <div class="container-fluid ">
-        <div class="row">
-            <div class="col-lg-12 bg-color-only pb-3 pt-3">
+    <div class="container-fluid bg-color-only ">
+        <div class="row py-5">
+            <div class="col-lg-12 pb-3 pt-3">
             <div class="container">
                 <div class="row">
                 <!-- Section 1 -->
