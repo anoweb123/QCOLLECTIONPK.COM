@@ -32,11 +32,7 @@
                             <i class="fa fa-facebook fa-lg pr-3" aria-hidden="true"></i>
                         </a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a href="">
-                            <i class="fa fa-youtube fa-lg pr-3" aria-hidden="true"></i>
-                        </a>
-                    </li>
+                   
                     <li class="nav-item">
                         <a href="">
                             <i class="fa fa-instagram fa-lg pr-3" aria-hidden="true"></i>
@@ -210,9 +206,15 @@
                             <input type="text" value="women" class="btn w-70 text-uppercase  white-btn">
                             <i class="fa fa-angle-down" style="font-size: 11px;" aria-hidden="true"></i>
                         </a>
-                        <div class="dropdown-menu women-menu " aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item color_black" href="#">Comming Soon !</a>
-                            <div class="dropdown-divider"></div>
+                        <div class="dropdown-menu women-menu" aria-labelledby="navbarDropdown">
+                        <div class="container"> 
+                        <div class="row">
+                        <a class="dropdown-item color_black" href="#">Comming Soon !</a>
+                            <div class="dropdown-divider"></div> 
+                        </div>
+                        
+                        </div>
+                            
                            
                         </div>
                     </li>
