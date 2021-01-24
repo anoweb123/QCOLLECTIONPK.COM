@@ -49,7 +49,7 @@
                             </li>
                         </ol>
                         <!-- Whats App -->
-                       <a href="https://wa.me/+923235295257" target="_blank"><button type="button" class="btn btn-color font_size mt-3" ><i class="fa fa-whatsapp pr-2 font_size1" aria-hidden="true"></i>WhatsApp</button></a> 
+                       <a href="https://wa.me/+923047928912" target="_blank"><button type="button" class="btn btn-color font_size mt-3" ><i class="fa fa-whatsapp pr-2 font_size1" aria-hidden="true"></i>WhatsApp</button></a> 
                     
                     </div>
                 <!-- Section 2-->

@@ -170,7 +170,7 @@ input::-webkit-inner-spin-button {
     font-weight: bold;
     height: 50px;
     padding: 0;
-    width: 50px !important;
+    width: 22%;
     position: relative;
     background-color: #FF9900 !important;
     color: white;
@@ -188,7 +188,7 @@ input::-webkit-inner-spin-button {
     height: 50px;
     left: -6px;
     text-align: center;
-    width: 62px;
+    width: 50%;
     display: inline-block;
     font-size: 13px;
     margin: 0 0 5px;
@@ -228,6 +228,10 @@ label {
 #xx-large:checked~label[for="xx-large"] {
     background: #FF9900;
     color: #fff;
+}
+
+.text-black {
+    color: black !important;
 }
 
 
@@ -304,4 +308,20 @@ label {
 
 del {
     color: #FF9900;
+}
+
+a:hover {
+    text-decoration: none !important;
+}
+
+.h-300 {
+    height: 500px !important;
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 720px) {
+    .h-300 {
+        height: 300px !important;
+        overflow: hidden;
+    }
 }

@@ -1,3 +1,7 @@
+<?php 
+    include_once './includes/singleProduct.inc.php'; 
+    $productId = 5;
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,15 +24,15 @@
     <!-- External CSS -->
 
     <!-- For header -->
-    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="../css/header.css">
     <!-- For footer -->
-    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="../css/footer.css">
     <!-- For Slider -->
-    <link rel="stylesheet" href="./css/singleproduct.css">
+    <link rel="stylesheet" href="../css/singleproduct.css">
     <!-- External CSS -->
 
     <!-- External Js -->
-    <script src="./js/header.js"></script>
+    <script src="../js/header.js"></script>
 
     <!-- External Js -->
 
@@ -38,54 +42,62 @@
 
 <body>
 
-    <div class="container-fluid my-3">
+<div class="container-fluid my-3">
+    <?php
+    $products = $showProduct->selectedProduct($productId);
+    foreach ($products as $row => $link) {
+        ?>
         <div class="row">
             <div class="col-md-6">
 
                 <!-- Slider -->
 
                 <div class="row">
-                    <div class="col-3">
+                    <div class="col-md-3 order-last order-md-first">
 
                         <!-- For small sliders -->
-                        <div class="">
-                            <img class="demo cursor h-100"
-                                src="https://cdn.shopify.com/s/files/1/0671/0621/products/Black_9dbb4b16-11fc-42f4-86d7-58975956eaf5_2000x.jpg?v=1609860541"
-                                style="width:100%" onclick="currentSlide(1)" alt="The Woods">
-                        </div><br>
-                        <div class="">
-                            <img class="demo cursor h-100"
-                                src="https://cdn.shopify.com/s/files/1/0671/0621/products/Maroon_9339f5c9-723b-4926-bbfe-09f82d86204b_2000x.jpg?v=1609860560"
-                                style="width:100%;" onclick="currentSlide(2)" alt="Cinque Terre">
-                        </div><br>
-                        <div class="">
-                            <img class="demo cursor h-100"
-                                src="https://cdn.shopify.com/s/files/1/0671/0621/products/1_ef46eda1-1ae8-481c-86d2-e6bd80c66c40_2000x.jpg?v=1609860487"
-                                style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
-                        </div><br>
-
+                        <div class="row">
+                            <!-- image 1 -->
+                            <div class="col-4 col-md-12">
+                                <div class="" style="overflow: hidden; height: 80px">
+                                <img class="demo cursor h-100 img-thumbnail"
+                                    src="<?php echo $link['image1'] ?>"
+                                    style="width:90%" onclick="currentSlide(1)" alt="The Woods">
+                                </div><br>
+                            </div>
+                             <!-- image 2 -->
+                            <div class="col-4 col-md-12">
+                                <div class="" style="overflow: hidden; height: 80px">
+                                <img class="demo cursor h-100 img-thumbnail"
+                                    src="<?php echo $link['image2'] ?>"
+                                    style="width:90%" onclick="currentSlide(2)" alt="The Woods">
+                                </div><br>
+                            </div>
+                             <!-- image 3 -->
+                            <div class="col-4 col-md-12">
+                                <div class="" style="overflow: hidden; height: 80px">
+                                <img class="demo cursor h-100 img-thumbnail"
+                                    src="<?php echo $link['image3'] ?>"
+                                    style="width:90%" onclick="currentSlide(3)" alt="The Woods">
+                                </div><br>
+                            </div>
+                        </div>
                         <!-- For small sliders -->
-
-
                     </div>
-                    <div class="col-9">
-
-                        <div class="mySlides">
-                            <img src="https://cdn.shopify.com/s/files/1/0671/0621/products/Black_9dbb4b16-11fc-42f4-86d7-58975956eaf5_2000x.jpg?v=1609860541"
-                                style="width:100%; height:400px">
+                    <!-- for big image -->
+                    <div class="col-md-9">
+                         <!-- image 1 -->
+                        <div class="mySlides img-thumbnail h-300">
+                            <img  src="<?php echo $link['image1'] ?>" alt="" style="width:100%;" />
                         </div>
-
-                        <div class="mySlides">
-                            <img src="https://cdn.shopify.com/s/files/1/0671/0621/products/Maroon_9339f5c9-723b-4926-bbfe-09f82d86204b_2000x.jpg?v=1609860560"
-                                style="width:100%; height:400px">
+                         <!-- image 2 -->
+                        <div  class="mySlides img-thumbnail h-300">
+                            <img src="<?php echo $link['image2'] ?>" alt="" style="width:100%" />
                         </div>
-
-                        <div class="mySlides">
-                            <img src="https://cdn.shopify.com/s/files/1/0671/0621/products/1_ef46eda1-1ae8-481c-86d2-e6bd80c66c40_2000x.jpg?v=1609860487"
-                                style="width:100%; height:400px">
+                         <!-- image 3 -->
+                        <div class="mySlides img-thumbnail h-300">
+                            <img src="<?php echo $link['image3'] ?>" alt="" style="width:100%" />
                         </div>
-
-
                     </div>
                 </div>
 
@@ -96,46 +108,48 @@
 
             </div>
             <div class="col-md-6">
-                <h4 class="text-uppercase name">MEN'S Lancaster CLASSIC FLEECE JOGGER PANTS</h4>
+                <h4 class="text-uppercase name"><?php echo $link['name'] ?></h4>
                 <hr>
-                <p>Rs <span>899.00</span></p>
+                <p>Rs <span><?php $discountedValue=($link['price']*(100-$link['discount']))/100; echo (int)$discountedValue ?></span> <small class='ml-2'> RS <del><?php echo $link['price'] ?></del></small></p>
                 <div>
                     <h6>Color</h6>
-                    <div class="select-size">
-                        <input type="radio" name="colors" id="color1" checked />
-                        <input type="radio" name="colors" id="color2" />
-                        <input type="radio" name="colors" id="color3" />
-                        <input type="radio" name="colors" id="color4" />
-
-                        <label for="color1" class="label" style="background-color:red;"></label>
-                        <label for="color2" class="label" style="background-color:black;"></label>
-                        <label for="color3" class="label" style="background-color:white;"></label>
-                        <label for="color4" class="label" style="background-color:green;"></label>
-
-                    </div>
+                        <div class="select-size">
+                        <?php
+                        $products = $showProduct->selectColors($productId);
+                        foreach ($products as $row => $links) { ?>
+                            <input type="radio" name="colors" value="<?php echo $links['color'] ?>" id="color<?php echo $links['id'] ?>" checked />
+                            <label for="color<?php echo $links['id'] ?>" class="label" style="background-color:<?php echo $links['color'] ?>;"></label>
+                        <?php } ?>
+                        </div>
+                    
                 </div>
-                <div>
+                <div id='loader' style='display: none;'>
+                    <img src='https://i.pinimg.com/originals/a5/56/09/a55609061c5f24331405610fbf59203d.gif' width='70px' height='50px'>
+                    <small>Please Wait while the product sizes are loading</small>
+                </div>
+                <div class="sizes">
                     <h6>Size</h6>
                     <div class="select-size">
-                        <input type="radio" name="s-size" id="small" checked />
-                        <input type="radio" name="s-size" id="medium" />
-                        <input type="radio" name="s-size" id="large" />
-                        <input type="radio" name="s-size" id="x-large" />
-                        <input type="radio" name="s-size" id="xx-large" />
+                        <input class='ss' type="radio" value="s" name="s-size" id="small" />
+                        <input class='ms' type="radio" value="m" name="s-size" id="medium"  />
+                        <input class='ls' type="radio" value="l" name="s-size" id="large" />
+                        <input class='xls' type="radio" value="xl" name="s-size" id="x-large" />
+                        <input class='xlls' type="radio" value="xll" name="s-size" id="xx-large" />
 
-                        <label for="small">S</label>
-                        <label for="medium">M</label>
-                        <label for="large">L</label>
-                        <label for="x-large">XL</label>
-                        <label for="xx-large">XXL</label>
+                        <label class='s' for="small">S</label>
+                        <label class='m' for="medium">M</label>
+                        <label class='l' for="large">L</label>
+                        <label class='xl' for="x-large">XL</label>
+                        <label class='xll' for="xx-large">XXL</label>
 
                     </div>
+                    <small class="quantity"></small>
                 </div>
                 <div class="row form-inline">
                     <div class="col-6">
-                        <div class="input-group ">
+                        <div class="input-group w-100">
                             <input type="button" value="-" class="button-minus" data-field="quantity">
-                            <input type="number" style="width: 60% !important" step="1" value="1" name="quantity"
+                            <input type="number" step="1" value="1" name="quantity"
                                 class="quantity-field ">
                             <input type="button" value="+" class="button-plus" data-field="quantity">
                         </div>
@@ -147,15 +161,7 @@
                 </div>
                 <div class="row">
                     <div class="col-12" style="line-height: 2;word-spacing: 2px; font-weight: lighter;">
-                        <p>Please look at the size guide before completing your order as sizes vary from brand to brand.
-                        </p>
-                        <ul>
-                            <li>Soft brushed fleece fabric</li>
-                            <li>Two Side pockets</li>
-                            <li>One Back Pocket</li>
-                            <li>Elasticated waistband with drawcord</li>
-                            <li>Ribbed Bottom</li>
-                        </ul>
+                        <?php echo $link['description'] ?>
                     </div>
                 </div>
 
@@ -183,13 +189,14 @@
 
             </div>
         </div>
-    </div>
+    <?php } ?>
 
 
 
     <!-- External js -->
     <script src="./js/singleproduct.js"></script>
     <script src="./js/header.js"></script>
+    <script src="../js/ajax.js"></script>
 
 </body>
 

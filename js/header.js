@@ -49,3 +49,4 @@ $('.input-group').on('click', '.button-minus', function(e) {
 function goback(){
     history.back();
 }
+

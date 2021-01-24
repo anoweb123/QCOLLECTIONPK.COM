@@ -1,5 +1,5 @@
     .bg-color {
-        background-color: #28286f;
+        background-color: #071227;
         color: white;
     }
     
@@ -155,7 +155,7 @@
         height: 100%;
         position: fixed;
         z-index: 9999;
-        background: url("https://codemyui.com/wp-content/uploads/2017/09/rotate-pulsating-loading-animation.gif") no-repeat center center rgba(40, 40, 111, 0.75)
+        background: url("https://codemyui.com/wp-content/uploads/2017/09/rotate-pulsating-loading-animation.gif") no-repeat center center rgba(7, 18, 39, 0.75)
     }
     /* hover image */
     

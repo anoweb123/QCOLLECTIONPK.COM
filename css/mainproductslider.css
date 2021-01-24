@@ -61,7 +61,7 @@
     line-height: 20px;
     margin-bottom: 0;
     margin-top: 10px;
-    text-align: center;
+    /* text-align: center; */
 }
 
 .col-item .separator p i {
@@ -102,4 +102,10 @@
 .c-color {
     background-color: #CB934F !important;
     border-color: unset;
+}
+
+.description {
+    font-size: 13px;
+    font-style: italic;
+    color: #808080;
 }

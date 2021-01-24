@@ -1,3 +1,4 @@
+<?php include_once './universalLinks.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -49,7 +50,7 @@
                     </li>
                     <li class="nav-item">
                         <a href="">
-                            <small class="pr-3">+92 323 5295257</small>
+                            <small class="pr-3">0304 792 8912</small>
                         </a>
                     </li>
                     <li class="nav-item">
@@ -83,7 +84,7 @@
             </button>
 
             <a class="navbar-brand ml-3" href="#">
-                <img width="80px" height="50px" src="" alt="LOGO">
+                <img width="130px" height="80px" src="<?php echo $baseUrl; ?>assets/staticassets/logo.png" alt="LOGO">
             </a>
 
 
