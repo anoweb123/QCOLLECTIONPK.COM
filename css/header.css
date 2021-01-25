@@ -145,7 +145,7 @@
         color: #fff
     }
     
-    HEAD .color_black {
+    .color_black {
         color: black !important;
         /* //on screen load animation */
     }

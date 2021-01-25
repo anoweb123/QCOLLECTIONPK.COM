@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -35,6 +34,11 @@
     <script src="../js/header.js"></script>
     <!-- External Js -->
 
+    <style>
+        .container-fluid:{
+            padding: 0px
+        }
+    </style>
 
 
 
@@ -59,8 +63,8 @@
                         New Arrivals
                     </h4>
                     <hr style="width: 125px; font-weight: bold; border-top: 3px inset black;">
+                    <?php include './mainproductslider.php' ?>
                 </div>
-                <?php include './mainproductslider.php' ?>
             </div>
         </div>
         <!-- Show small banner -->
