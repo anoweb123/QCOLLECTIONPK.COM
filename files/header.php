@@ -13,6 +13,29 @@
         box-shadow: 1px 1px 5px #CB934F;
         font-weight: bold;
     }
+    .icon{
+        align-items: center;
+        display: inline-flex;
+        justify-content: center;
+        height: 1.2rem;
+        width: 1.2rem;
+        fill: currentColor;
+    }
+    .badge{
+        height: 1rem;
+        width: 1rem;
+        position: absolute;
+        top: calc(1rem * -0.3);
+        left: calc(65% - 0.2rem);
+        font-size: 0.7rem;
+        background: #ff9900;
+        color: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        letter-spacing: 0;
+    }
     </style>
 </head>
 
@@ -132,19 +155,21 @@
                 </form>
                 <div class="form-inline my-2 my-lg-0 ml-5 sidebar-social d-sm-none d-xl-block d-lg-block ">
                     <ul class="text-center">
-                        <li class="mr-4">
+                        <!-- <li class="mr-4">
                             <a href="" rel="nofollow">
                                 <i class="fa fa-user-circle"></i><span>Login</span>
                             </a>
-                        </li>
-                        <li class="cart-button">
-                            <a href="" title="Cart" class="sub" rel="nofollow">
-                                <i class="fa fa-shopping-basket"></i><span>cart</span>
+                        </li> -->
+                        <li class="cart-button mr-2 w-75">
+                            <a href="./cart.php" title="Cart" class="sub" rel="nofollow">
+                                <span class="icon"><i class="fa fa-shopping-basket "></i></span>
+                                <span class="badge items no-displays"></span>
+                                <span style="margin-top:10px">cart</span>
                             </a>
                             <div class="cart-dropdown">
-                                <div class="font-weight-bold head-dropdown">Shopping Cart <small>(0)</small></div>
+                                <div class="font-weight-bold head-dropdown">Shopping Cart <small>(<span class="items"></span>)</small></div>
                                 <hr>
-                                <div class="empty-cart text-center w-100">
+                                <div class="empty-cart text-center w-100 no-display">
                                     <div class="">
                                         <div class="cart-icon pt-2">
                                             <i class="fa fa-shopping-basket text-dark"

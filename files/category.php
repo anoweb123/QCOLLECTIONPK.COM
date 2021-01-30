@@ -135,8 +135,9 @@
 
 
 <!-- External js -->
-<script src="../js/singleproduct.js"></script>
+    <script src="../js/singleproduct.js"></script>
     <script src="../js/header.js"></script>
+    <script src="../js/cart.ajax.js"></script>
     <script>
             // to animate when page load CSS is in header.css
     document.onreadystatechange = function() {

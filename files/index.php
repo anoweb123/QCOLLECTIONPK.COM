@@ -1,3 +1,6 @@
+<?php
+    include_once './sessionId.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,14 +37,6 @@
     <script src="../js/header.js"></script>
     <!-- External Js -->
 
-    <style>
-        .container-fluid:{
-            padding: 0px
-        }
-    </style>
-
-
-
 </head>
 
 <body>
@@ -56,14 +51,14 @@
         </div>
         <!-- for top carousel -->
 
-        <div class="container-fluid" id="newarrival">
-            <div class="row">
-                <div class="col-12 text-center mt-3">
+        <div class="p-0" id="newarrival">
+            <div class="row p-0 m-0">
+                <div class="col-12 text-center mt-3 p-0">
                     <h4 style="font-weight: bolder; letter-spacing: 1.5px">
                         New Arrivals
                     </h4>
                     <hr style="width: 125px; font-weight: bold; border-top: 3px inset black;">
-                    <?php include './mainproductslider.php' ?>
+                    <?php  include './mainproductslider.php' ?>
                 </div>
             </div>
         </div>
@@ -134,14 +129,20 @@
         </div>
 
         <!-- Show Ads -->
-        <a href="" target="_blank">
-
-            <div style="background-image: url(../assets/staticassets/ad.png);height: 120px !important; background-repeat: no-repeat !important; width: 100% !important; background-size: 100% 100%; "
-                class="col-12 my-2"></div>
-            <div class="py-1 d-flex flex-row-reverse mr-3">
-                <i class="fas fa-ad pl-2">&#xf641; Ad</i>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <a href="" target="_blank">
+                        <div style="background-image: url(../assets/staticassets/ad.png);height: 120px !important; background-repeat: no-repeat !important; width: 100% !important; background-size: 100% 100%; "
+                            class="col-12 my-2"></div>
+                        <div class="py-1 d-flex flex-row-reverse mr-3">
+                            <i class="fas fa-ad pl-2">&#xf641; Ad</i>
+                        </div>
+                    </a>
+                </div>
             </div>
-        </a>
+        </div>
+        
         <!-- Show Ads -->
 
         <div class="container-fluid py-3">
@@ -195,33 +196,36 @@
 
 
 
-    </div>
 
-    <div style='background: url("../assets/staticassets/contact-us-bg.jpg") !important;  background-repeat: no-repeat'>
-    <div class="container py-5">
-        <div class="col-6 py-5 text-center" style="color: white; background-color:black; opacity: 0.4; border-radius: 10px;">
-            <h3 class="font-weight-bold">Subscribe us</h3>
-            <div class="pt-3">
-                <form action="">
-                <div class="input-group m-0">
-                    <input type="email" class="form-control rounded" placeholder="example@gmail.com" aria-label="Search"
-                        aria-describedby="search-addon" />
-                    <button type="button" class="btn btn-primary w-25">Send</button>
+        <div style='background: url("../assets/staticassets/contact-us-bg.jpg") !important;  background-repeat: no-repeat'>
+            <div class="container py-5">
+                <div class="row">
+                    <div class="col-6 py-5 text-center"
+                        style="color: white; background-color:black; opacity: 0.4; border-radius: 10px;">
+                        <h3 class="font-weight-bold">Subscribe us</h3>
+                        <div class="pt-3">
+                            <form action="">
+                                <div class="input-group m-0">
+                                    <input type="email" class="form-control rounded" placeholder="example@gmail.com"
+                                        aria-label="Search" aria-describedby="search-addon" />
+                                    <button type="button" class="btn btn-primary w-25">Send</button>
+                                </div>
+                            </form>
+                            <small>*to get update with our latest design send us your email</small>
+                        </div>
+                    </div>
                 </div>
-                </form>
-                <small>*to get update with our latest design send us your email</small>
             </div>
         </div>
-    </div>
-    </div>
 
-    <?php include './footer.php' ?>
+        <?php  include './footer.php' ?>
     </div>
 
 
     <!-- External js -->
     <script src="../js/singleproduct.js"></script>
     <script src="../js/header.js"></script>
+    <script src="../js/cart.ajax.js"></script>
     <script>
     // to load and animate sell single item item
     $(window).scroll(function() {

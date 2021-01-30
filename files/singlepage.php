@@ -252,13 +252,10 @@
     <?php include '../files/footer.php' ?>
     <!-- External js -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <!-- <script>
-        
-    </script> -->
     <script src="../js/singleproduct.js"></script>
     <script src="../js/header.js"></script>
     <script src="../js/ajax.js"></script>
-
+    <script src="../js/cart.ajax.js"></script>
     
 
 </body>
