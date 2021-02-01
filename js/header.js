@@ -20,6 +20,7 @@ function incrementValue(e) {
 
     if (!isNaN(currentVal)) {
         parent.find('input[name=' + fieldName + ']').val(currentVal + 1);
+        $('#quantity').val(currentVal + 1);
     } else {
         parent.find('input[name=' + fieldName + ']').val(0);
     }
@@ -33,6 +34,7 @@ function decrementValue(e) {
 
     if (!isNaN(currentVal) && currentVal > 0) {
         parent.find('input[name=' + fieldName + ']').val(currentVal - 1);
+        $('#quantity').val(currentVal - 1);
     } else {
         parent.find('input[name=' + fieldName + ']').val(0);
     }

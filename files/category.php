@@ -63,8 +63,12 @@
                 else{ 
                     $page = 1;
                 };
+                if($category == "newestarrival"){
+                    $test = $showType->latestProducts($category, $page);
+                }else{
+                    $test = $showType->selectedCategory($category, $page);
+                }
                 
-                $test = $showType->selectedCategory($category, $page);
                 foreach ($test as $row => $link) { ?>
                 <div class="col-sm-4 py-5">
                     <!-- Card-->
@@ -116,8 +120,13 @@
                         } 
                         else{ 
                             $page = 1;
-                        };  
-                        echo $showType->pagination($category, $page);  
+                        };
+                        if($category == "newestarrival"){
+                            echo $showType->paginationAll($category, $page);
+                        }else{
+                            echo $showType->pagination($category, $page);
+                        }
+                          
                     ?>
                     
                     <li>

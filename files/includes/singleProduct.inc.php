@@ -31,6 +31,14 @@
             return $result;
         }
 
+        function activeProduct(){
+            $link = new connect;
+            $stmt = $link->prepare("SELECT * FROM `products` INNER JOIN `images` ON products.id = images.product_id WHERE products.`first_page` = '1'");
+            $stmt->execute();
+            $result = $stmt->fetchAll();
+            return $result;
+        }
+
     
     };
     

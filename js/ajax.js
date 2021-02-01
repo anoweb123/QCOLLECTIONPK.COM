@@ -1,5 +1,6 @@
 $("input[type=radio][name=colors]").change(function () {
   color = this.value;
+  $('#color').val(color)
   $.ajax({
     url: "./includes/getColorSize.inc.php",
     type: "POST",
@@ -75,6 +76,7 @@ $("input[type=radio][name=colors]").change(function () {
 });
 $(document).ready(function () {
   color = $("input[type=radio][name=colors]").val();
+  $('#color').val(color)
   $.ajax({
     url: "./includes/getColorSize.inc.php",
     type: "POST",
@@ -153,18 +155,23 @@ $("input[type=radio][name=s-size]").change(function () {
   var size = $("[name=s-size]:checked").val();
   if(size == 's'){
     $(".quantity").html("Maximum available quantities are " + quantity_s);
+    $("#size").val('s');
   }
   if(size == 'm'){
     $(".quantity").html("Maximum available quantities are " + quantity_m);
+    $("#size").val('m');
   }
   if(size == 'l'){
     $(".quantity").html("Maximum available quantities are " + quantity_l);
+    $("#size").val('l');
   }
   if(size == 'xl'){
     $(".quantity").html("Maximum available quantities are " + quantity_xl);
+    $("#size").val('xl');
   }
   if(size == 'xll'){
     $(".quantity").html("Maximum available quantities are " + quantity_xll);
+    $("#size").val('xll');
   }
 })
 

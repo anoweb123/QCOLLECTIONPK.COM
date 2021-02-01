@@ -45,7 +45,7 @@
                 <div class="row">
                     <div style="letter-spacing: 2px" class="col-12 text-center Bodonifont pt-3">
                         <h1 class="font-weight-bold">CART</h1>
-                        <a href="#"><small class="cool-link">Continue Shopping</small></a>
+                        <a href="./index.php"><small class="cool-link">Continue Shopping</small></a>
                     </div>
                 </div>
 

@@ -134,7 +134,7 @@
                 <div class="sizes">
                     <h6>Size</h6>
                     <div class="select-size">
-                        <input class='ss' type="radio" value="s" name="s-size" id="small" />
+                        <input class='ss' type="radio" value="s" name="s-size" id="small" required />
                         <input class='ms' type="radio" value="m" name="s-size" id="medium"  />
                         <input class='ls' type="radio" value="l" name="s-size" id="large" />
                         <input class='xls' type="radio" value="xl" name="s-size" id="x-large" />
@@ -159,8 +159,26 @@
                         </div>
                     </div>
                     <div class="col-6">
-                        <button style="height: 50px;" class="w-100 text-uppercase btn bg-colors"><i
-                                class="fa fa-cart-plus"></i> Add to cart</button>
+                        <!-- form -->
+                        <form action="" class="form-submit">
+                            <!-- For add to cart values -->
+                            <input type="hidden" class="pid" value="<?php echo $link['id'] ?>">
+                            <input type="hidden" class="quantity" id="quantity" value="1">
+                            <input type="hidden" class="discount" value="<?php echo $link['discount'] ?>">
+                            <input type="hidden" class="session_id" value="<?php echo $sessionId; ?>">
+                            <input type="hidden" class="color" id="color" value="auto">
+                            <input type="hidden" class="size" id="size" value="auto">
+
+                            <?php if($link['discount'] != 0) { ?>
+                                <input type="hidden" class="pprice" value="<?php $discountedValue=($link['price']*(100-$link['discount']))/100; echo (int)$discountedValue ?>">
+                            <?php } else { ?>
+                                <input type="hidden" class="pprice" value="<?php echo $link['price'] ?>">
+                            <?php } ?>
+                            <!-- For add to cart values -->
+                            <button style="height: 50px;" class="w-100 text-uppercase btn bg-colors  addItemBtn"><i class="fa fa-cart-plus"></i> Add to cart</button>
+                        </form>
+                        <!-- form -->
+
                     </div>
                 </div>
                 <div class="row">
