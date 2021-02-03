@@ -36,6 +36,34 @@
         border-radius: 50%;
         letter-spacing: 0;
     }
+    #display{
+        position: absolute;
+        margin-top: 5%;
+        width: 98%;
+        background-color: #E5E4DF;
+        margin-right: 26px;
+        color: black;
+    }
+    .search-detail{
+        color: grey;
+        font-size: 12px;
+        font-style: initial;
+        margin-bottom: 0px;
+    }
+    .search-header{
+        color: blue !important;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .top-product{
+        background-color: #a0a0a0;
+        font-size: 12px;
+        border-top: 1px solid transparent;
+        border-bottom: 1px solid transparent;
+        color: #E5E4DF;
+        text-decoration: italic;
+        font-style: italic;
+    }
     </style>
 </head>
 
@@ -102,7 +130,7 @@
                 <i class="fa fa-bars color_white" aria-hidden="true"></i>
             </button>
 
-            <a class="navbar-brand ml-3" href="#">
+            <a class="navbar-brand ml-5" href="./index.php">
                 <img width="130px" height="80px" src="<?php echo $baseUrl; ?>assets/staticassets/logo.png" alt="LOGO">
             </a>
 
@@ -111,32 +139,34 @@
 
             <div class="form-inline my-2 my-lg-0 ml-5 sidebar-social d-block d-lg-none d-xl-none">
                 <ul class="text-center">
-                    <li class="mr-4">
+                    <li class="mr-4 d-none">
                         <a href="" rel="nofollow">
                             <i class="fa fa-user-circle"></i><span>Login</span>
                         </a>
                     </li>
                     <li class="cart-button">
-                        <a href="" title="Cart" class="sub" rel="nofollow">
-                            <i class="fa fa-shopping-basket"></i><span>cart</span>
-                        </a>
-                        <div class="cart-dropdown">
-                            <div class="font-weight-bold head-dropdown">Shopping Cart <small>(0)</small></div>
-                            <hr>
-                            <div class="empty-cart text-center w-100">
-                                <div class="">
-                                    <div class="cart-icon pt-2">
-                                        <i class="fa fa-shopping-basket text-dark"
-                                            style="font-size: 50px; height:50px; width:50px" aria-hidden="true"></i>
-                                        <p class="font-weight-bold mt-3" style="letter-spacing: 1.5px;">Your Cart is
-                                            Empty</p>
-                                        <p class="font-weight-bold mt-3" style="letter-spacing: 1.5px;">Continue to Shop
-                                        </p>
+                            <a href="./cart.php" title="Cart" class="sub" rel="nofollow">
+                                <span class="icon"><i class="fa fa-shopping-basket "></i></span>
+                                <span class="badge items no-displays"></span>
+                                <span style="margin-top:10px">cart</span>
+                            </a>
+                            <div class="cart-dropdown">
+                                <div class="font-weight-bold head-dropdown">Shopping Cart <small>(<span class="items"></span>)</small></div>
+                                <hr>
+                                <div class="empty-cart text-center w-100 no-display">
+                                    <div class="">
+                                        <div class="cart-icon pt-2">
+                                            <i class="fa fa-shopping-basket text-dark"
+                                                style="font-size: 50px; height:50px; width:50px" aria-hidden="true"></i>
+                                            <p class="font-weight-bold mt-3" style="letter-spacing: 1.5px;">Your Cart is
+                                                Empty</p>
+                                            <p class="font-weight-bold mt-3" style="letter-spacing: 1.5px;">Continue to
+                                                Shop</p>
 
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
                     </li>
                 </ul>
 
@@ -145,13 +175,14 @@
 
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <form class="input-group md-form form-sm form-2 pl-3">
-                    <input class="form-control my-0 py-1 lime-border d-sm-none d-xl-block d-lg-block" type="text"
+                <form class="input-group md-form form-sm form-2 pl-3 w-100" autocomplete="off">
+                    <input class="form-control my-0 py-1 lime-border d-sm-none d-xl-block d-lg-block" type="text" id="search"
                         placeholder="What are you looking for..." aria-label="Search">
                     <div class="input-group-append ">
                         <span class="input-group-text  search_icon d-sm-none d-xl-block d-lg-block" id="basic-text1"><i
                                 class="fa fa-search" aria-hidden="true"></i></span>
                     </div>
+                    <div id="display" class="d-sm-none d-xl-block d-lg-block"></div>
                 </form>
                 <div class="form-inline my-2 my-lg-0 ml-5 sidebar-social d-sm-none d-xl-block d-lg-block ">
                     <ul class="text-center">
@@ -188,8 +219,9 @@
 
                 </div>
             </div>
+            
         </nav>
-
+        
         <!-- bottom Navbar -->
         <nav class="navbar navbar-expand-lg navbar-light bg-color">
 
@@ -274,6 +306,8 @@
         </nav>
 
 
+
+    <script src="../js/search.js"></script>
 
     <script>
     function blink(btn) {
