@@ -1,4 +1,5 @@
 <?php include_once './universalLinks.php'; ?>
+<?php include_once './sessionId.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -75,24 +76,23 @@
             <div class="collapse navbar-collapse" id="">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a href="">
+                        <a href="https://twitter.com/qcollectionpk?s=08">
                             <i class="fa fa-twitter fa-lg pr-3" aria-hidden="true"></i>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="">
+                        <a href="https://www.facebook.com/Q-Collection-104420701387862/">
                             <i class="fa fa-facebook fa-lg pr-3" aria-hidden="true"></i>
                         </a>
                     </li>
-                   
                     <li class="nav-item">
-                        <a href="">
+                        <a href="https://www.instagram.com/invites/contact/?i=1r0w5fe9yb275&utm_content=kwczkk0">
                             <i class="fa fa-instagram fa-lg pr-3" aria-hidden="true"></i>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="">
-                            <i class="fa fa-envelope pr-3" aria-hidden="true"></i>
+                        <a href="https://www.pinterest.com/QCollectionpk/">
+                            <i class="fa fa-pinterest-square pr-3" aria-hidden="true"></i>
                         </a>
                     </li>
                     <li class="nav-item">
@@ -122,7 +122,7 @@
                 </div>
             </div>
         </nav>
-
+        <input type="hidden" id="sessionids" value="<?php echo $sessionId; ?>" />
         <!-- middle navbar -->
         <nav class="navbar navbar-expand-lg navbar-light bg-color sticky-top">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -150,10 +150,12 @@
                                 <span class="badge items no-displays"></span>
                                 <span style="margin-top:10px">cart</span>
                             </a>
-                            <div class="cart-dropdown">
+                            <div class="cart-dropdown no-display">
                                 <div class="font-weight-bold head-dropdown">Shopping Cart <small>(<span class="items"></span>)</small></div>
                                 <hr>
-                                <div class="empty-cart text-center w-100 no-display">
+
+                                <!-- for empty cart -->
+                                <div class="empty-cart text-center w-100 ">
                                     <div class="">
                                         <div class="cart-icon pt-2">
                                             <i class="fa fa-shopping-basket text-dark"
@@ -162,10 +164,14 @@
                                                 Empty</p>
                                             <p class="font-weight-bold mt-3" style="letter-spacing: 1.5px;">Continue to
                                                 Shop</p>
-
                                         </div>
                                     </div>
                                 </div>
+                                <!-- for cart having values -->
+                                
+                                
+
+
                             </div>
                     </li>
                 </ul>
@@ -197,10 +203,10 @@
                                 <span class="badge items no-displays"></span>
                                 <span style="margin-top:10px">cart</span>
                             </a>
-                            <div class="cart-dropdown">
+                            <div class="cart-dropdown no-display">
                                 <div class="font-weight-bold head-dropdown">Shopping Cart <small>(<span class="items"></span>)</small></div>
                                 <hr>
-                                <div class="empty-cart text-center w-100 no-display">
+                                <div class="empty-cart text-center w-100 ">
                                     <div class="">
                                         <div class="cart-icon pt-2">
                                             <i class="fa fa-shopping-basket text-dark"
@@ -227,21 +233,21 @@
 
 
             <div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto white-btn">
+                <ul class="navbar-nav mx-auto white-btn" >
                     <li class="nav-item active btn-special" id="btn">
-                        <a href="">
+                        <a href="category.php?categoryName=newestarrival">
                             <input type="text" value="Weekly offers" class="btn ml-1 text-uppercase"
                                 style="color: #CB934F">
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="">
+                        <a href="category.php?categoryName=newestarrival">
                             <input type="text" value="New arrivals" class="btn ml-1 text-uppercase  w-80  white-btn">
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="">
-                            <input type="text" value="HOme" class="btn w-60 px-0 ml-1 text-uppercase ml-1  white-btn">
+                        <a href="./index.php">
+                            <input type="text" value="Home" class="btn w-60 px-0 ml-1 text-uppercase ml-1  white-btn">
                         </a>
                     </li>
                    
@@ -251,24 +257,34 @@
                             <input type="text" value="men" class="btn w-60 px-0 text-uppercase  white-btn">
                             <i class="fa fa-angle-down" style="font-size: 11px;" aria-hidden="true"></i>
                         </a>
-                        <div class="dropdown-menu men-menu" aria-labelledby="navbarDropdown">
+                        <div class="dropdown-menu men-menu w-100" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item color_black" href="#">Comming Soon !</a>
                             <div class="dropdown-divider"></div>
-                           
+                            <div class="text-center">
+                            <!-- <a href="https://wa.me/+923235295257"> -->
+                                <i class="fa fa-whatsapp fa-2x" aria-hidden="true"></i>
+                            <!-- </a> -->
+                            <small class="py-2">Contact us for special order</small>
+                            </div>
                         </div>
                     </li>
 
                     <li class="nav-item dropdown women">
                         
-                        <a  href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a  href="category.php?categoryName=unstitched" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <input type="text" value="women" class="btn w-70 text-uppercase  white-btn">
-                            <i class="fa fa-angle-down" style="font-size: 11px;" aria-hidden="true"></i>
+                            
                         </a>
-                        <div class="dropdown-menu women-menu" aria-labelledby="navbarDropdown">
+                        <div class="dropdown-menu women-menu w-100" aria-labelledby="navbarDropdown">
                         <div class="container"> 
                         <div class="row">
-                        <a class="dropdown-item color_black" href="#">Comming Soon !</a>
-                            <div class="dropdown-divider"></div> 
+                        <div class="dropdown-divider"></div>
+                            <div class="text-center">
+                            <!-- <a href="https://wa.me/+923235295257"> -->
+                                <i class="fa fa-whatsapp fa-2x" aria-hidden="true"></i>
+                            <!-- </a> -->
+                            <small class="py-2">Contact us for special order</small>
+                            </div>
                         </div>
                         
                         </div>
@@ -276,10 +292,22 @@
                            
                         </div>
                     </li>
-                    <li class="nav-item">
-                        <a href="">
+                    <li class="nav-item kids">
+                        <a href="" id="navbarDropdownkid" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <input type="text" value="Kids" class="btn w-60 px-0 text-uppercase  white-btn">
+                            <i class="fa fa-angle-down" style="font-size: 11px;" aria-hidden="true"></i>
                         </a>
+                        <div class="dropdown-menu kids-menu w-100" aria-labelledby="navbarDropdownkid">
+                            <a class="dropdown-item color_black" href="#">Comming Soon !</a>
+                            <div class="dropdown-divider"></div>
+                            <div class="text-center">
+                            <!-- <a href="https://wa.me/+923235295257"> -->
+                                <i class="fa fa-whatsapp fa-2x" aria-hidden="true"></i>
+                            <!-- </a> -->
+                            <small class="py-2">Contact us for special order</small>
+                            </div>
+                        </div>
                     </li>
                     <li class="nav-item">
                         <a href="">

@@ -149,10 +149,10 @@
     padding-top: 20px;
     display: inline-block;
     overflow: hidden;
-    height: 220px;
+    height: 320px;
 }
 
-.notify-badge {
+/* .notify-badge {
     position: absolute;
     right: 10px;
     top: 10px;
@@ -163,7 +163,7 @@
     padding: 5px 10px;
     font-size: 12px;
     z-index: 1;
-}
+} */
 
 .images {
     transition: all .7s ease-in-out;
@@ -174,7 +174,7 @@
 }
 
 .images:hover {
-    max-height: 220px;
+    max-height: 320px;
     transform: scale(1.2);
     overflow: hidden;
 }
@@ -183,4 +183,5 @@
     background-color: #071227 !important;
     border: 3px solid rgb(255, 255, 255) !important;
     border-bottom: none !important;
+    border-radius: 50px 50px 0px 0px;
 }

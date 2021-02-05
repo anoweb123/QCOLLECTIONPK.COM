@@ -11,6 +11,7 @@ $(document).ready(function() {
         var pprice = $form.find(".pprice").val();
         var color = $form.find(".color").val();
         var size = $form.find(".size").val();
+        if(size !== "auto"){
         $.ajax({
             url: '../files/includes/cart.include.php',
             method: 'post',
@@ -26,11 +27,14 @@ $(document).ready(function() {
             },
             success: function(response) {
                 $("#message").html(response);
-                window.scrollTo(450, 450);
+                // window.scrollTo(450, 450);
                 load_cart_item_number();
             },
             
         });
+        }else{
+            alert("Kindly Select the Size")
+        }
     });
     
     // Load total no.of items added in the cart and display in the navbar
@@ -56,20 +60,24 @@ $(document).ready(function() {
     }
 
     function load_cart_item_number() {
+        ssId = document.getElementById('sessionids').value;
       $.ajax({
         url: '../files/includes/cart.include.php',
         method: 'get',
         data: {
-          cartItem: "cart_item"
+          cartItem: "cart_item",
+          sid: ssId
         },
         success: function(response) {
             $(".items").html(response);
             if(response == 0){
                 $('.no-display').css('display', 'block')
                 $('.no-displays').css('display', 'none')
+                $('items').html(response)
             }else {
                 $('.no-display').css('display', 'none')
                 $('.no-displays').css('display', 'block')
+                $('items').html(response)
             }
         }
       });

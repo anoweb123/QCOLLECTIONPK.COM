@@ -69,8 +69,8 @@
 }
 
 .col-item .btn-add {
-    width: 50%;
-    float: left;
+    width: 100%;
+    /* float: left; */
     color: #538600 !important;
     border-right: 1px solid #E1E1E1;
 }
@@ -82,14 +82,14 @@
 .col-item .btn-details a {
     color: #CB934F !important;
 }
-
+/* 
 .col-item .btn-details {
     width: 50%;
     float: left;
     padding-left: 10px;
     color: #CB934F !important;
     border-right: 1px solid #E1E1E1;
-}
+} */
 
 .controls {
     margin-top: 20px;

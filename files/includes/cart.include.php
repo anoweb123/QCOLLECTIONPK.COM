@@ -10,8 +10,8 @@
 	  $size = $_POST['size'];
 	  $pprice = $_POST['pprice'];
 	  $order_id = 1;
-	  $stmt = $link->prepare('SELECT `product_id` FROM `cart` WHERE `product_id` = ?');
-	  $stmt->bind_param('s',$pid);
+	  $stmt = $link->prepare('SELECT `product_id` FROM `cart` WHERE `product_id` = ? AND `session_id` = ?');
+	  $stmt->bind_param('ss',$pid, $session_id);
 	  $stmt->execute();
 	  $res = $stmt->get_result();
 	  $r = $res->fetch_assoc();
@@ -37,7 +37,8 @@
 
 	// Get no.of items available in the cart table
 	if (isset($_GET['cartItem']) && isset($_GET['cartItem']) == 'cart_item') {
-	  $stmt = $link->prepare('SELECT * FROM cart');
+		$sid = $_GET['sid'];
+	  $stmt = $link->prepare("SELECT * FROM cart WHERE `session_id` = '$sid'");
 	  $stmt->execute();
 	  $stmt->store_result();
 	  $rows = $stmt->num_rows;
@@ -119,8 +120,9 @@
 	}
 
 	// Set total price of the product in the cart table
-	if (isset($_POST['qtys'])) {
+	if(isset($_POST['updateQuantity'])) {
 		$qty = $_POST['qtys'];
+		echo $qty;
 		$pid = $_POST['pids'];
 		$pprice = $_POST['pprice'];
   
@@ -129,4 +131,10 @@
 		$stmt = $link->prepare('UPDATE cart SET quantity=?, purchasing_price=? WHERE product_id=?');
 		$stmt->bind_param('sss',$qty,$tprice,$pid);
 		$stmt->execute();
+		if($stmt->execute()){
+			echo "Quantity updated successfully";
+		}
+		else{
+			echo "Error updating Quantity";
+		}
 	  }

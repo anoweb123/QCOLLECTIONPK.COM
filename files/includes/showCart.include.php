@@ -1,10 +1,12 @@
 <?php
     session_start();
     include_once "./config.php";
+    
     class productByCategory{
         function showCart(){
-			$link = new connect;
-            $stmt = $link->prepare("SELECT *,cart.id AS ID FROM `cart` INNER JOIN products ON products.id = cart.product_id INNER JOIN images ON cart.product_id = images.product_id");
+            $link = new connect;
+            $session_id = session_id();
+            $stmt = $link->prepare("SELECT *,cart.id AS ID FROM `cart` INNER JOIN products ON products.id = cart.product_id INNER JOIN images ON cart.product_id = images.product_id WHERE cart.`session_id` = '$session_id'");
             $stmt->execute();
             $result = $stmt->fetchAll();
             return $result;

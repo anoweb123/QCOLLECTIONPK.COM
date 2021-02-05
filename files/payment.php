@@ -199,6 +199,10 @@
             success:function(response){
                 // alert(response)
                 $('#thanksModal').modal('show')
+                $('#thanksModal').modal({
+                    backdrop: 'static',
+                    keyboard: false
+                })
             } 
         })
     });

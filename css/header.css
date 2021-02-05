@@ -132,10 +132,20 @@
     
     .men:hover .men-menu {
         display: block;
+        width: 250px !important;
+        text-align: center
     }
     
     .women:hover .women-menu {
         display: block;
+        width: 250px !important;
+        text-align: center
+    }
+    
+    .kids:hover .kids-menu {
+        display: block;
+        width: 250px !important;
+        text-align: center
     }
     /* to make ALT tag white */
     

@@ -76,6 +76,9 @@
                 <?php 
                     $products = $showType->showCart();
                     $purchasing = 0;
+                    // echo count($products);
+                    $count = count($products);
+                    if($count >0){
                     foreach ($products as $row => $link) { 
                 ?>
                 <div class="row my-2">
@@ -95,7 +98,7 @@
                                             echo $link['color'];
                                         }
                                         
-                                    ?>" class="colors"></p>
+                                    ?>; border: 1px solid black" class="colors"></p>
                                     <span class="col-1 ml">Size:</span>
                                     <p class=" col-1" ><p class="size px-1"><?php
                                         if($link['size'] == "auto"){
@@ -117,16 +120,31 @@
                     
 
                     <div class="col-4 col-sm-2 my-auto">
-                        <div class="">Rs. <?php echo number_format($link["price"],2) ?></div>
+
+                        <?php if($link['discount'] != 0) { ?>
+                            <div class="">Rs. <?php $discountedValue=($link['price']*(100-$link['discount']))/100; echo (int)$discountedValue ?></div>
+                        <?php } else { ?>
+                            <div class="">Rs. <?php  echo number_format($link["price"],2) ?></div>
+                        <?php } ?>
+
                         <!-- <input type="hidden" id="pp" > -->
                     </div>
 
                     <form action="" class="change-submit col-4 col-sm-1 my-auto">
                         <input type="hidden" class="pid" value="<?php echo $link['id']; ?>">
-                        <input type="hidden" class="pprice" value="<?php echo $link['price']; ?>">
+
+                        <?php if($link['discount'] != 0) { ?>
+                                <input type="hidden" class="pprice" value="<?php $discountedValue=($link['price']*(100-$link['discount']))/100; echo (int)$discountedValue ?>">
+                            <?php } else { ?>
+                                <input type="hidden" class="pprice" value="<?php echo $link['price'] ?>">
+                            <?php } ?>
                     
                         <!-- <div class="col-4 col-sm-1 my-auto"> -->
                             <input type="number" class="form-control itemQty" name="" id="" value="<?php echo $link['quantity'] ?>" min="1">
+                            <div id='loaders' style='display: none;'>
+                                <img src='https://i.pinimg.com/originals/a5/56/09/a55609061c5f24331405610fbf59203d.gif' width='70px' height='50px'>
+                                <small>Please Wait while the quantity is updating</small>
+                            </div>
                         <!-- </div> -->
                     </form>
 
@@ -142,7 +160,18 @@
                     $purchasing += $link["purchasing_price"];
                 ?>
 
-                <?php } ?>
+                <?php } 
+                    }else{
+
+// ECHO "<a href=\"./index.php\" OnClick=\"return confirm('You have no item in the cart kindly add valuable items in the cart.');\"> Click here </a>";
+echo '<script type="text/javascript">'; 
+echo 'alert("You don\'t have any item in the cart");'; 
+echo 'window.location.href = "./index.php";';
+echo '</script>';
+
+
+                    }
+                ?>
                 
                 <!-- Black line -->
                 <div class="blacksline pt-2"></div>
@@ -192,19 +221,31 @@
         var pid = $el.find(".pid").val();
         var pprice = $el.find(".pprice").val();
         var qty = $el.find(".itemQty").val();
-        location.reload(true);
         $.ajax({
           url: '../files/includes/cart.include.php',
           method: 'post',
           cache: false,
           data: {
             qtys: qty,
+            updateQuantity: true,
             pids: pid,
             pprice: pprice
           },
+          beforeSend: function(){
+            // Show image container
+            $("#loaders").show();
+            $(".itemQty").hide();
+          },
           success: function(response) {
             console.log(response);
-            alert(response);
+            // alert(response);
+            // location.reload(); 
+          },
+          complete:function(data){
+            // Hide image container
+            $("#loaders").hide();
+            $(".itemQty").show();
+            location.reload();
           }
          });
       });

@@ -27,7 +27,7 @@
             $total_records = $row_db;
             $total_pages = ceil($total_records / $limit);
             for ($i=1; $i<=$total_pages; $i++) {
-                echo $pagLink = "<li><a class='' href='?categoryName=$category&page=".$i."'>".$i."</a></li>";	
+                echo $pagLink = "<li><a class='tab$i' href='?categoryName=$category&page=".$i."'>".$i."</a></li>";	
             }
         }
 
@@ -56,7 +56,7 @@
             $total_records = $row_db;
             $total_pages = ceil($total_records / $limit);
             for ($i=1; $i<=$total_pages; $i++) {
-                echo $pagLink = "<li><a class='' href='?categoryName=$category&page=".$i."'>".$i."</a></li>";	
+                echo $pagLink = "<li><a class='tab$i' href='?categoryName=$category&page=".$i."'>".$i."</a></li>";	
             }
         }
 

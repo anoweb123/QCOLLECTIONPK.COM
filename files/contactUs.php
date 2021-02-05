@@ -95,18 +95,19 @@
                     <div class="col-12">
                         <ol class="social_iconss p-0 pt-3">
                             <li class="">
-                                <a href="">
+                                <a href="https://twitter.com/qcollectionpk?s=08">
                                     <i class="fa fa-twitter twitter fa-lg pr-3" aria-hidden="true"></i>
                                 </a>
                             </li>
                             <li class="">
-                                <a href="">
+                                <a href="https://www.facebook.com/Q-Collection-104420701387862/">
                                     <i class="fa fa-facebook facebook fa-lg pr-3" aria-hidden="true"></i>
                                 </a>
                             </li>
                             <li class="">
-                                <a href="">
-                                    <i class="fa fa-envelope email pr-3" aria-hidden="true"></i>
+                                <a href="https://www.pinterest.com/QCollectionpk/">
+                                    <i class="fa fa-pinterest-square email pr-3" aria-hidden="true"></i>
+                                    
                                 </a>
                             </li>
                         </ol>

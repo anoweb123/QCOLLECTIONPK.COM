@@ -47,6 +47,7 @@
     <?php include '../files/header.php' ?>
 
     <div class="container-fluid my-3">
+    <div id="message"></div>
     <?php
     $products = $showProduct->selectedProduct($productId);
     foreach ($products as $row => $link) {
@@ -121,6 +122,13 @@
                         <?php
                         $products = $showProduct->selectColors($productId);
                         foreach ($products as $row => $links) { ?>
+                            <style>
+                                #color<?php echo $links['id'] ?>:checked~label[for="color<?php echo $links['id'] ?>"] {
+                                    /* background: #FF9900 !important; */
+                                    box-shadow: 2px 2px 10px black;
+                                    color: #fff;
+                                }
+                            </style>
                             <input type="radio" name="colors" value="<?php echo $links['color'] ?>" id="color<?php echo $links['id'] ?>" checked />
                             <label for="color<?php echo $links['id'] ?>" class="label" style="background-color:<?php echo $links['color'] ?>;"></label>
                         <?php } ?>
@@ -131,6 +139,7 @@
                     <img src='https://i.pinimg.com/originals/a5/56/09/a55609061c5f24331405610fbf59203d.gif' width='70px' height='50px'>
                     <small>Please Wait while the product sizes are loading</small>
                 </div>
+                <?php if($link['category'] == "stitched"){ ?>
                 <div class="sizes">
                     <h6>Size</h6>
                     <div class="select-size">
@@ -149,6 +158,7 @@
                     </div>
                     <small class="quantity"></small>
                 </div>
+                <?php } ?>
                 <div class="row form-inline">
                     <div class="col-6">
                         <div class="input-group w-100">
@@ -166,9 +176,13 @@
                             <input type="hidden" class="quantity" id="quantity" value="1">
                             <input type="hidden" class="discount" value="<?php echo $link['discount'] ?>">
                             <input type="hidden" class="session_id" value="<?php echo $sessionId; ?>">
-                            <input type="hidden" class="color" id="color" value="auto">
-                            <input type="hidden" class="size" id="size" value="auto">
-
+                            <?php if($link['category'] == "stitched"){ ?>
+                                <input type="hidden" class="color" id="color" value="auto">
+                                <input type="hidden" class="size" id="size" value="auto">
+                                <?php }else {  ?>  
+                                <input type="hidden" class="color" id="color" value="N/A">
+                                <input type="hidden" class="size" id="size" value="N/A"> 
+                                <?php } ?>
                             <?php if($link['discount'] != 0) { ?>
                                 <input type="hidden" class="pprice" value="<?php $discountedValue=($link['price']*(100-$link['discount']))/100; echo (int)$discountedValue ?>">
                             <?php } else { ?>
@@ -191,18 +205,18 @@
                     <div class="col-12">
                         <ol class="social_iconss p-0 pt-3">
                             <li class="">
-                                <a href="">
+                                <a href="https://twitter.com/qcollectionpk?s=08">
                                     <i class="fa fa-twitter twitter fa-lg pr-3" aria-hidden="true"></i>
                                 </a>
                             </li>
                             <li class="">
-                                <a href="">
+                                <a href="https://www.facebook.com/Q-Collection-104420701387862/">
                                     <i class="fa fa-facebook facebook fa-lg pr-3" aria-hidden="true"></i>
                                 </a>
                             </li>
                             <li class="">
-                                <a href="">
-                                    <i class="fa fa-envelope email pr-3" aria-hidden="true"></i>
+                                <a href="https://www.pinterest.com/QCollectionpk/">
+                                    <i class="fa fa-pinterest-square email pr-3" aria-hidden="true"></i>
                                 </a>
                             </li>
                         </ol>

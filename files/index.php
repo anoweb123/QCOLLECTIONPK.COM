@@ -53,6 +53,7 @@
 
         <div class="p-0" id="newarrival">
             <div class="row p-0 m-0">
+            <div id="message"></div>
                 <div class="col-12 text-center mt-3 p-0">
                     <h4 style="font-weight: bolder; letter-spacing: 1.5px">
                         New Arrivals

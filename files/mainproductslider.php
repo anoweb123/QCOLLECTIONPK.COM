@@ -14,7 +14,7 @@
 </head>
 <body>
 <div class="container mb-5">
-    <div id="message"></div>
+    
     <div class="row">
             <div class="col-md-9">
             </div>
@@ -39,11 +39,11 @@
                             ?>
                         <div class="col-sm-3">
                             <div class="col-item">
-                                <div class="photo" style="height: 200px; overflow: hidden;">
+                                <div class="photo" style="height: 300px; overflow: hidden;">
                                     <img src="<?php echo $link['image1'] ?>" class="images img-responsive" alt="a" />
                                 </div>
                                 <div class="info" >
-                                        <div class="price  my-3 w-100" style="min-height: 150px;">
+                                        <div class="price  my-3 w-100" style="min-height: 100px;">
                                             <h5><?php echo $link['name'] ?></h5>
                                             <h5 class="price-text-color">
                                             <?php if($link['discount'] != 0) { ?>
@@ -72,12 +72,12 @@
                                                     <input type="hidden" class="pprice" value="<?php echo $link['price'] ?>">
                                                 <?php } ?>
                                                 <!-- For add to cart values -->
-                                                <p class="btn-add addItemBtn">
-                                                <i class="fa fa-shopping-cart"></i><a class="hidden-sm myLink">Add to cart</a>
+                                                <p class="btn-add">
+                                                <i class="fa fa-shopping-cart"></i><a href="singlepage.php?productId=<?php echo $link['id'] ?>" class="hidden-sm myLink">Add to cart</a>
                                                 </p>
                                             </form>
                                         <p class="btn-details">
-                                            <i class="fa fa-list"></i><a href="singlepage.php?productId=<?php echo $link['id'] ?>" class="hidden-sm">More details</a>
+                                            <!-- <i class="fa fa-list"></i><a href="singlepage.php?productId=<?php // echo $link['id'] ?>" class="hidden-sm">More details</a> -->
                                         </p>
                                     </div>
                                     <div class="clearfix">
@@ -96,11 +96,11 @@
                         foreach ($products as $row => $link) { ?>
                         <div class="col-sm-3">
                             <div class="col-item">
-                                <div class="photo" style="height: 200px; overflow: hidden;">
+                                <div class="photo" style="height: 300px; overflow: hidden;">
                                     <img src="<?php echo $link['image1'] ?>" class="images img-responsive" alt="a" />
                                 </div>
                                 <div class="info" >
-                                        <div class="price  my-3 w-100" style="min-height: 150px;">
+                                        <div class="price  my-3 w-100" style="min-height: 100px;">
                                             <h5><?php echo $link['name'] ?></h5>
                                             <h5 class="price-text-color">
                                             <?php if($link['discount'] != 0) { ?>
@@ -129,12 +129,12 @@
                                                     <input type="hidden" class="pprice" value="<?php echo $link['price'] ?>">
                                                 <?php } ?>
                                                 <!-- For add to cart values -->
-                                                <p class="btn-add addItemBtn">
-                                                <i class="fa fa-shopping-cart"></i><a class="hidden-sm myLink">Add to cart</a>
+                                                <p class="btn-add ">
+                                                <i class="fa fa-shopping-cart"></i><a href="singlepage.php?productId=<?php echo $link['id'] ?>" class="hidden-sm myLink">Add to cart</a>
                                                 </p>
                                             </form>
                                         <p class="btn-details">
-                                            <i class="fa fa-list"></i><a href="singlepage.php?productId=<?php echo $link['id'] ?>" class="hidden-sm">More details</a>
+                                            <!-- <i class="fa fa-list"></i><a href="singlepage.php?productId=<?php //echo $link['id'] ?>" class="hidden-sm">More details</a> -->
                                         </p>
                                     </div>
                                     <div class="clearfix">

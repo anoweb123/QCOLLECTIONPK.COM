@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/category.css">
+    <link rel="stylesheet" href="../css/styletag.scss">
     
     <!-- for animation -->
     <link rel="stylesheet" href="../css/animation.css">
@@ -77,9 +78,9 @@
                         <a href='singlepage.php?productId=<?php echo $link['id'] ?>'>
                             <div class="item p-0 m-0">
                                 <?php if($link['discount'] != 0) { ?>
-                                <span class="notify-badge"><?php echo $link['discount'] ?> %</span>
+                                <span class="notify-badge "><?php echo $link['discount'] ?> %</span>
                                 <?php } ?>
-                                <img class='images img-rounded w-100' src="<?php echo $link['image1'] ?>" alt="<?php echo $link['name'] ?>" class="img-fluid d-block mx-auto mb-3">
+                                <img class='images img-rounded w-100' src="<?php echo $link['image1'] ?>" alt="<?php echo $link['name'] ?>">
                             </div>
                             <div class="p-2">
                                 <!-- Name and Description -->
@@ -108,8 +109,8 @@
             </div>
 
             
-            <div class="text-center p-2 bottom-color-border">
-                <ul class="pagination modal-5">
+            <div class="text-center pb-2 bottom-color-border">
+                <ul class="pagination modal-5" style="margin-top:-8px" >
                     <li>
                         <a href="" class="prev fa fa-arrow-left"> </a>
                     </li>
@@ -120,11 +121,21 @@
                         } 
                         else{ 
                             $page = 1;
+                            
                         };
                         if($category == "newestarrival"){
                             echo $showType->paginationAll($category, $page);
+                            echo "<script>
+                                $('.tab').removeClass('active');
+                                $('.tab$page').addClass('active');   
+                            </script>";
+                            
                         }else{
                             echo $showType->pagination($category, $page);
+                            echo "<script>
+                                $('.tab').removeClass('active');
+                                $('.tab$page').addClass('active');   
+                            </script>";
                         }
                           
                     ?>

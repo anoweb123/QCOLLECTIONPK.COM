@@ -46,8 +46,15 @@
     $products = $showProduct->activeProduct();
     foreach ($products as $row => $link) {
         $productId = $link['id'];
-        echo $productId;
         ?>
+        <div class="row">
+            <div class="col-12 text-center py-3">
+                <h4 style="font-weight: bolder; letter-spacing: 1.5px">
+                    <i>New Arrivals</i>
+                </h4>
+                <hr style="width: 125px; font-weight: bold; border-top: 3px inset black;">
+            </div>
+        </div>
         <div class="row">
             <div class="col-md-6">
 
@@ -118,6 +125,16 @@
                         <?php
                         $products = $showProduct->selectColors($productId);
                         foreach ($products as $row => $links) { ?>
+
+
+                            <style>
+                                #color<?php echo $links['id'] ?>:checked~label[for="color<?php echo $links['id'] ?>"] {
+                                    /* background: #FF9900 !important; */
+                                    box-shadow: 2px 2px 10px black;
+                                    color: #fff;
+                                }
+                            </style>
+
                             <input type="radio" name="colors" value="<?php echo $links['color'] ?>" id="color<?php echo $links['id'] ?>" checked />
                             <label for="color<?php echo $links['id'] ?>" class="label" style="background-color:<?php echo $links['color'] ?>;"></label>
                         <?php } ?>
@@ -164,9 +181,14 @@
                                 <input type="hidden" class="quantity" id="quantity" value="1">
                                 <input type="hidden" class="discount" value="<?php echo $link['discount'] ?>">
                                 <input type="hidden" class="session_id" value="<?php echo $sessionId; ?>">
+
+                                <?php if($link['category'] == "stitched"){ ?>
                                 <input type="hidden" class="color" id="color" value="auto">
                                 <input type="hidden" class="size" id="size" value="auto">
-
+                                <?php }else {  ?>  
+                                <input type="hidden" class="color" id="color" value="N/A">
+                                <input type="hidden" class="size" id="size" value="N/A"> 
+                                <?php } ?>
                                 <?php if($link['discount'] != 0) { ?>
                                     <input type="hidden" class="pprice" value="<?php $discountedValue=($link['price']*(100-$link['discount']))/100; echo (int)$discountedValue ?>">
                                 <?php } else { ?>
@@ -189,18 +211,18 @@
                     <div class="col-12">
                         <ol class="social_iconss p-0 pt-3">
                             <li class="">
-                                <a href="">
+                                <a href="https://twitter.com/qcollectionpk?s=08">
                                     <i class="fa fa-twitter twitter fa-lg pr-3" aria-hidden="true"></i>
                                 </a>
                             </li>
                             <li class="">
-                                <a href="">
+                                <a href="https://www.facebook.com/Q-Collection-104420701387862/">
                                     <i class="fa fa-facebook facebook fa-lg pr-3" aria-hidden="true"></i>
                                 </a>
                             </li>
                             <li class="">
-                                <a href="">
-                                    <i class="fa fa-envelope email pr-3" aria-hidden="true"></i>
+                                <a href="https://www.pinterest.com/QCollectionpk/">
+                                    <i class="fa fa-pinterest-square email pr-3" aria-hidden="true"></i>
                                 </a>
                             </li>
                         </ol>
