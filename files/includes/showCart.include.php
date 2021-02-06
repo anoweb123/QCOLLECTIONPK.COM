@@ -55,6 +55,14 @@
             echo " <script> location.replace('./shipping.php'); </script>";
         }
 
+        function hotProduct(){
+            $link = new connect;
+            $stmt = $link->prepare("SELECT * FROM `products` INNER JOIN images ON products.`id` = images.product_id INNER JOIN order_items ON products.id = order_items.product_id GROUP BY order_items.product_id ORDER BY COUNT(order_items.product_id) DESC LIMIT 4");
+            $stmt->execute();
+            $result = $stmt->fetchAll();
+            return $result;
+        }
+
     }
     
     $showType = new productByCategory;

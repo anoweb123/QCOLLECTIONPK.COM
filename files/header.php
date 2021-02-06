@@ -150,12 +150,12 @@
                                 <span class="badge items no-displays"></span>
                                 <span style="margin-top:10px">cart</span>
                             </a>
-                            <div class="cart-dropdown no-display">
+                            <div class="cart-dropdown ">
                                 <div class="font-weight-bold head-dropdown">Shopping Cart <small>(<span class="items"></span>)</small></div>
                                 <hr>
 
                                 <!-- for empty cart -->
-                                <div class="empty-cart text-center w-100 ">
+                                <div class="empty-cart text-center w-100 no-display">
                                     <div class="">
                                         <div class="cart-icon pt-2">
                                             <i class="fa fa-shopping-basket text-dark"
@@ -203,10 +203,10 @@
                                 <span class="badge items no-displays"></span>
                                 <span style="margin-top:10px">cart</span>
                             </a>
-                            <div class="cart-dropdown no-display">
+                            <div class="cart-dropdown ">
                                 <div class="font-weight-bold head-dropdown">Shopping Cart <small>(<span class="items"></span>)</small></div>
                                 <hr>
-                                <div class="empty-cart text-center w-100 ">
+                                <div class="empty-cart text-center w-100 no-display">
                                     <div class="">
                                         <div class="cart-icon pt-2">
                                             <i class="fa fa-shopping-basket text-dark"
@@ -308,11 +308,6 @@
                             <small class="py-2">Contact us for special order</small>
                             </div>
                         </div>
-                    </li>
-                    <li class="nav-item">
-                        <a href="">
-                            <input type="text" value="big and tall" class="btn w-80 text-uppercase  white-btn">
-                        </a>
                     </li>
                 </ul>
 

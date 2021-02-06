@@ -137,9 +137,9 @@
     }
     
     .women:hover .women-menu {
-        display: block;
+        /* display: block;
         width: 250px !important;
-        text-align: center
+        text-align: center */
     }
     
     .kids:hover .kids-menu {

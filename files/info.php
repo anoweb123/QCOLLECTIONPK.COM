@@ -66,7 +66,7 @@
                             </div>
 
                             <div class="form-group">
-                                <input type="text" name="suit" class="form-control"  placeholder="Apartment, suite, etc. Optional">
+                                <input type="email" required  name="suit" class="form-control"  placeholder="Email example@gmail.com">
                             </div>
 
                             <div class="form-group">

@@ -1,5 +1,6 @@
 <?php
     include_once './sessionId.php';
+    include_once './includes/showCart.include.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -81,8 +82,28 @@
                     </h4>
                     <hr style="width: 100px; font-weight: bold">
                 </div>
-
+                <?php 
+                    $products = $showType->hotProduct();
+                    foreach ($products as $row => $link) { 
+                ?>
                 <div class="col-6 col-md-3">
+                    <div class="card">
+                        <img style="height: 300px;" class="card-img-top" src="<?php echo $link['image1'] ?>" alt="Card image cap">
+                        <div class="card-body">
+                            <a href="<?php echo $link['product_id'] ?>" class="card-text hide_flow"><?php echo $link['short_description'] ?></a>
+                            <!-- <p class="text-center pt-4">RS 999 <del>RS 1100</del></p> -->
+                            <p class="text-center pt-4">
+                            <?php if($link['discount'] != 0) { ?>
+                                                    <small class="text-left text-black pb-2">Rs <span><?php $discountedValue=($link['price']*(100-$link['discount']))/100; echo (int)$discountedValue ?></span> <small class='ml-2'>  <del>RS <?php echo $link['price'] ?></del></small></small>
+                                                <?php } else { ?>
+                                                    <small class="text-left text-black pb-4">Rs <span><?php echo $link['price'] ?></span> </small>
+                                                <?php } ?>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <?php } ?>
+                <!-- <div class="col-6 col-md-3">
                     <div class="card">
                         <img class="card-img-top" src="../assets/staticassets/nav_logo.jpg" alt="Card image cap">
                         <div class="card-body">
@@ -114,18 +135,7 @@
                             <p class="text-center pt-4">RS 999 <del>RS 1100</del></p>
                         </div>
                     </div>
-                </div>
-                <div class="col-6 col-md-3">
-                    <div class="card">
-                        <img class="card-img-top" src="../assets/staticassets/nav_logo.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <a href="" class="card-text hide_flow">Some quick example text to build on the card title
-                                and
-                                make up a bulk</a>
-                            <p class="text-center pt-4">RS 999 <del>RS 1100</del></p>
-                        </div>
-                    </div>
-                </div>
+                </div> -->
             </div>
         </div>
 
@@ -201,7 +211,7 @@
         <div style='background: url("../assets/staticassets/contact-us-bg.jpg") !important;  background-repeat: no-repeat'>
             <div class="container py-5">
                 <div class="row">
-                    <div class="col-6 py-5 text-center"
+                    <div class="col-sm-6 py-5 text-center"
                         style="color: white; background-color:black; opacity: 0.4; border-radius: 10px;">
                         <h3 class="font-weight-bold">Subscribe us</h3>
                         <div class="pt-3">
